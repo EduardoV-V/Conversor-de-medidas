@@ -49,5 +49,3 @@ function converter() {
     document.getElementById('result').innerText = `Resultado: ${result}`;
     console.log(result);
 }
-
-document.getElementById('convert').onclick=convert();
