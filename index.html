@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <div class="container">
+        <h1>Conversor de Medidas</h1>
+        <div class="converter">
+            <input type="number" id="inputValue" placeholder="Insira o valor">
+            <select id="conversionType">
+                <option value="kmToM">Distância: km para m</option>
+                <option value="kmhToMs">Velocidade: km/h para m/s</option>
+                <option value="cToF">Temperatura: °C para °F</option>
+                <option value="kgToG">Massa: kg para g</option>
+                <option value="lToMl">Volume: L para mL</option>
+                <option value="paToAtm">Pressão: Pa para atm</option>
+                <option value="m2ToCm2">Área: m² para cm²</option>
+                <option value="hToMin">Tempo: h para min</option>
+                <option value="miToKm">Comprimento: mi para km</option>
+                <option value="gbToMb">Dados: GB para MB</option>
+            </select>
+            <button id="convert" onclick="converter()">Converter</button>
+            <div id="result">Resultado:</div>
+        </div>
+    </div>
+</body>
+</html>
