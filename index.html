@@ -6,39 +6,41 @@
     <title>Conversor de Medidas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<script src="script.js" type="module" defer></script>
+<script src="script.js"></script>
+
 <body>
     <div class="container">
         <h1>Conversor de Medidas</h1>
         <div class="converter">
-            <input type="number" id="inputValue" placeholder="Insira o valor">
-
-            <select id="conversionIn">
-                <option value="Nanometro">Nanometro</option>
-                <option value="Micrometro">Micrometro</option>
-                <option value="Milimetro">Milimetro</option>
-                <option value="Centimetro">Centimetro</option>
-                <option value="Metro">Metro</option>
-                <option value="Quilometro">Quilometro</option>
-                <option value="Milha">Milha</option>
-                <option value="Pe">Pé</option>
-                <option value="Polegada">Polegada</option>
-                <option value="Jarda">Jarda</option>
-            </select>
-
-            <select id="conversionOut">
-                <option value="Nanometro">Nanometro</option>
-                <option value="Micrometro">Micrometro</option>
-                <option value="Milimetro">Milimetro</option>
-                <option value="Centimetro">Centimetro</option>
-                <option value="Metro">Metro</option>
-                <option value="Quilometro">Quilometro</option>
-                <option value="Milha">Milha</option>
-                <option value="Pe">Pé</option>
-                <option value="Polegada">Polegada</option>
-                <option value="Jarda">Jarda</option>
-            </select>
-            <button id="converter" onclick="conv()">Converter</button>
+            <input type="number" id="inputValue" placeholder="Insira o valor" onclick="limpar()">
+            <div class="unidades">
+                <select id="conversionIn" onchange="limpar()">
+                    <option value="Nanometro">Nanômetros</option>
+                    <option value="Micrometro">Micrômetros</option>
+                    <option value="Milimetro">Milímetros</option>
+                    <option value="Centimetro">Centímetros</option>
+                    <option value="Metro">Metros</option>
+                    <option value="Quilometro">Quilômetros</option>
+                    <option value="Polegada">Polegadas</option>
+                    <option value="Pe">Pés</option>
+                    <option value="Milha">Milhas</option>
+                    <option value="Jarda">Jardas</option>
+                </select>
+                <p style="font-size: 1.5em;">&#8594;</p>
+                <select id="conversionOut" onchange="limpar()">
+                    <option value="Nanometro">Nanômetros</option>
+                    <option value="Micrometro">Micrômetros</option>
+                    <option value="Milimetro">Milímetros</option>
+                    <option value="Centimetro">Centímetros</option>
+                    <option value="Metro">Metros</option>
+                    <option value="Quilometro">Quilômetros</option>
+                    <option value="Polegada">Polegadas</option>
+                    <option value="Pe">Pés</option>
+                    <option value="Milha">Milhas</option>
+                    <option value="Jarda">Jardas</option>
+                </select>
+            </div>
+            <button class="Converter" id="convert" onclick="converter()">Converter</button>
             <div id="result">Resultado:</div>
         </div>
     </div>

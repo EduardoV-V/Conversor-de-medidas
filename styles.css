@@ -18,9 +18,38 @@ body {
     width: 100%;
 }
 
+.unidades{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.unidades select{
+    max-width: 40%;
+}
+
 h1 {
     margin-bottom: 20px;
 }
+
+.Converter{
+    border: 0;
+    border-radius: 4px;
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  4px 4px 7px #a1a1a1,
+             -4px -4px 7px #ffffff;
+}
+.Converter:hover{
+
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+.Converter:active{
+    border-radius: 4px;
+    box-shadow: inset 5px 5px 25px #a1a1a1,
+                inset -5px -5px 25px #ffffff;
+    }
 
 .converter input, .converter select, .converter button {
     margin: 10px 0;
