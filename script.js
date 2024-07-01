@@ -1,8 +1,12 @@
-function converter() {
+import { conversorFormulas } from "./conversor.js";
+
+function conv() {
+    console.log("teste");
     const inputValue = parseFloat(document.getElementById('inputValue').value);
-    const conversionType = document.getElementById('conversionType').value;
+    const conversionIn = document.getElementById('conversionIn').value;
+    const conversionOut = document.getElementById('conversionOut').value;
+
     let result;
-    console.log("teste")
 
     if (isNaN(inputValue)) {
         const errorMessage = 'Por favor, insira um valor válido.';
@@ -11,41 +15,20 @@ function converter() {
         return;
     }
 
-    switch(conversionType) {
-        case 'kmToM':
-            result = inputValue * 1000;
-            break;
-        case 'kmhToMs':
-            result = inputValue / 3.6;
-            break;
-        case 'cToF':
-            result = (inputValue * 9/5) + 32;
-            break;
-        case 'kgToG':
-            result = inputValue * 1000;
-            break;
-        case 'lToMl':
-            result = inputValue * 1000;
-            break;
-        case 'paToAtm':
-            result = inputValue / 101325;
-            break;
-        case 'm2ToCm2':
-            result = inputValue * 10000;
-            break;
-        case 'hToMin':
-            result = inputValue * 60;
-            break;
-        case 'miToKm':
-            result = inputValue * 1.60934;
-            break;
-        case 'gbToMb':
-            result = inputValue * 1024;
-            break;
-        default:
-            result = 'Tipo de conversão inválido';
+    if (conversorFormulas[conversionIn] && conversorFormulas[conversionIn][conversionOut]) {
+        result = conversorFormulas[conversionIn][conversionOut] * inputValue;
+        console.log(result);
+    } else {
+        const errorMessage = 'Conversão não disponível.';
+        document.getElementById('result').innerText = 'Resultado: ' + errorMessage;
+        console.log(errorMessage);
+        return;
     }
 
     document.getElementById('result').innerText = `Resultado: ${result}`;
     console.log(result);
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('converter').addEventListener('click', conv);
+});
