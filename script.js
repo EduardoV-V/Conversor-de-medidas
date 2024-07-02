@@ -109,12 +109,19 @@ function converter() {
 
     let result;
 
-    if (isNaN(inputValue) || inputValue<=0) {
+    if (isNaN(inputValue)) {
         const errorMessage = 'Por favor, insira um valor válido.';
         document.getElementById('result').innerText = errorMessage;
         console.log(errorMessage);
         return;
     }
+
+    if (inputValue<=0) {
+        const errorMessage = 'Por favor, insira um valor válido.';
+        document.getElementById('result').innerText = errorMessage;
+        console.log(errorMessage);
+        return;
+    }    
     
     if (conversionIn === conversionOut) {
     const errorMessage = 'Selecione uma opção válida para conversão.';
