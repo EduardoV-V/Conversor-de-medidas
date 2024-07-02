@@ -123,11 +123,12 @@ function converter() {
     return;
     }
 
+    else{
+        result = conversorFormulas[conversionIn][conversionOut]*inputValue
 
-    result = conversorFormulas[conversionIn][conversionOut]*inputValue
-
-    document.getElementById('result').innerText = `Resultado: ${result}`;
-    console.log(result);
+        document.getElementById('result').innerText = `Resultado: ${result}`;
+        console.log(result);
+    };
 };
 
 function limpar(){
