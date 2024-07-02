@@ -111,14 +111,14 @@ function converter() {
 
     if (isNaN(inputValue)) {
         const errorMessage = 'Por favor, insira um valor válido.';
-        document.getElementById('result').innerText = 'Resultado: ' + errorMessage;
+        document.getElementById('result').innerText = errorMessage;
         console.log(errorMessage);
         return;
     }
     
     if (conversionIn === conversionOut) {
     const errorMessage = 'Selecione uma opção válida para conversão.';
-    document.getElementById('result').innerText = 'Resultado: ' + errorMessage;
+    document.getElementById('result').innerText = errorMessage;
     console.log(errorMessage);
     return;
     }
