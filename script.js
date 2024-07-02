@@ -109,7 +109,7 @@ function converter() {
 
     let result;
 
-    if (isNaN(inputValue)) {
+    if (isNaN(inputValue) || inputValue<=0) {
         const errorMessage = 'Por favor, insira um valor válido.';
         document.getElementById('result').innerText = errorMessage;
         console.log(errorMessage);
