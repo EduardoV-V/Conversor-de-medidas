@@ -115,6 +115,14 @@ function converter() {
         console.log(errorMessage);
         return;
     }
+    
+    if (conversionIn === conversionOut) {
+    const errorMessage = 'Selecione uma opção válida para conversão.';
+    document.getElementById('result').innerText = 'Resultado: ' + errorMessage;
+    console.log(errorMessage);
+    return;
+    }
+
 
     result = conversorFormulas[conversionIn][conversionOut]*inputValue
 
